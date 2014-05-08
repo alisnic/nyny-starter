@@ -11,11 +11,16 @@ task :environment do
   App.new #=> needed for the the hooks to run, add your env logic below
 end
 
+task :console => :environment do
+  require 'irb'
+  ARGV.shift
+  IRB.start
+end
+
 namespace :db do
   task :env do
-    ENV['RACK_ENV'] ||= 'development'
-    DATABASE_ENV = ENV['RACK_ENV']
-    require_relative 'database'
+    DATABASE_ENV = NYNY.env
+    App.new
   end
 
   task :migrate => :env do
