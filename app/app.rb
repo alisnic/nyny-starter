@@ -10,6 +10,7 @@ class App < NYNY::App
       :adapter => "sqlite3",
       :database => File.join(File.dirname(__FILE__), "../db/#{NYNY.env}.sqlite3")
     }
+    config.assets.paths += %w(vendor/assets/javascripts vendor/assets/stylesheets)
   end
 
   after_initialize do
