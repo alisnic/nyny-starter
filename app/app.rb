@@ -2,8 +2,11 @@ require 'nyny'
 require 'bundler'
 Bundler.require(:default, NYNY.env.to_sym)
 
+require_relative 'helpers/application_helper'
+
 class App < NYNY::App
   register Sprockets::NYNY
+  helpers ApplicationHelper
 
   configure do
     config.database = {
@@ -15,5 +18,9 @@ class App < NYNY::App
 
   after_initialize do
     ActiveRecord::Base.establish_connection config.database
+  end
+
+  get '/' do
+    template :index
   end
 end
