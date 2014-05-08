@@ -2,8 +2,16 @@ source 'http://rubygems.org'
 
 gem 'nyny'
 gem 'sprockets-nyny'
-gem 'puma'
 gem 'activerecord', :require => 'active_record'
 gem 'sqlite3'
 gem 'haml'
-gem 'coffee-script'
+
+group :production do
+  gem 'puma'
+end
+
+group :development do
+  gem 'coffee-script'
+  gem 'haml_coffee_assets'
+end
+
