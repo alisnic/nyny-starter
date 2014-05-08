@@ -28,7 +28,12 @@ GEM
       erubis (>= 2.6.6)
     builder (3.1.4)
     coderay (1.1.0)
+    coffee-script (2.2.0)
+      coffee-script-source
+      execjs
+    coffee-script-source (1.6.3)
     erubis (2.7.0)
+    execjs (2.0.2)
     haml (4.1.0.beta.1)
       tilt
     hike (1.2.3)
@@ -69,6 +74,7 @@ PLATFORMS
 
 DEPENDENCIES
   activerecord
+  coffee-script
   haml
   nyny
   puma
