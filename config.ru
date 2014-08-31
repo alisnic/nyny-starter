@@ -1,7 +1,7 @@
 require_relative 'app/app'
 require 'sprockets'
 
-use BetterErrors::Middleware
+use BetterErrors::Middleware if NYNY.env.development?
 
 map '/assets' do
   environment = Sprockets::Environment.new
