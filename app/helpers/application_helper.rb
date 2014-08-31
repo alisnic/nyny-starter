@@ -7,4 +7,12 @@ module ApplicationHelper
       render File.join(TEMPLATE_DIR, "#{name}.haml")
     end
   end
+
+  def stylesheet name
+    %Q{<link type="text/css" rel="stylesheet" href="/assets/#{name}.css">}
+  end
+
+  def javascript name
+    %Q{<script src="/assets/#{name}.js"></script>}
+  end
 end

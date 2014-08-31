@@ -1,7 +1,6 @@
 source 'http://rubygems.org'
 
 gem 'nyny'
-gem 'sprockets-nyny'
 gem 'activerecord', :require => 'active_record'
 gem 'sqlite3'
 gem 'haml'

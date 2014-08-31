@@ -1,11 +1,9 @@
 require 'nyny'
 require 'bundler'
 Bundler.require(:default, NYNY.env.to_sym)
-
 require_relative 'helpers/application_helper'
 
 class App < NYNY::App
-  register Sprockets::NYNY
   helpers ApplicationHelper
 
   configure do
@@ -13,8 +11,6 @@ class App < NYNY::App
       :adapter => "sqlite3",
       :database => File.join(File.dirname(__FILE__), "../db/#{NYNY.env}.sqlite3")
     }
-    config.assets.paths += %w(vendor/assets/javascripts vendor/assets/stylesheets)
-    config.assets.precompile += %w(vendor.js vendor.css)
   end
 
   after_initialize do

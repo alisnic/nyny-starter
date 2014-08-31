@@ -1,8 +1,8 @@
 %html
   %head
-    = stylesheet_link_tag "vendor"
-    = stylesheet_link_tag "application"
+    = stylesheet "vendor"
+    = stylesheet "application"
   %body
     = yield
-    = javascript_include_tag "vendor"
-    = javascript_include_tag "application"
+    = javascript "vendor"
+    = javascript "application"
