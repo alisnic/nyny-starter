@@ -1,3 +1,2 @@
-#= require haml
-#= require jquery-2.1.1.min
-#= require underscore-min
+#= require jquery-2.1.1
+#= require lodash-2.4.1
