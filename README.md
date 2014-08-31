@@ -5,5 +5,5 @@ A template NYNY application with some goodies to quickly build a prototype app.
 
 - ActiveRecord
 - HAML
-- Backbone + Marionette + HamlCoffee on clientside
+- jQuery + Underscore
 - Zurb Foundation
