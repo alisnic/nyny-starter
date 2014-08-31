@@ -14,6 +14,10 @@ task :console => :environment do
   IRB.start
 end
 
+task :server do
+  system %Q{rerun -d app -p "**/*.rb" bundle exec rackup}
+end
+
 namespace :db do
   task :env do
     DATABASE_ENV = NYNY.env
