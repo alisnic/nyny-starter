@@ -12,5 +12,6 @@ end
 group :development do
   gem 'coffee-script'
   gem 'haml_coffee_assets'
+  gem 'rerun'
 end
 
