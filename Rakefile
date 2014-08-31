@@ -1,11 +1,8 @@
-require 'sprockets/nyny'
 require_relative 'app/app'
 require 'yaml'
 require 'logger'
 
 MIGRATIONS_DIR = 'db/migrate'
-
-Sprockets::NYNY.load_tasks(App)
 
 task :environment do
   App.new #=> needed for the the hooks to run, add your env logic below

@@ -1,5 +1,4 @@
 require_relative 'app/app'
-
 require 'sprockets'
 
 use BetterErrors::Middleware
